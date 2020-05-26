@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{BD24F1B0-6578-49FB-9C6F-BA264FC159F7}</ProjectGuid>
+    <ProjectGuid>{312294E3-26A4-44A6-93B0-B5F8B19919A7}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>ProjetoMVC3A</RootNamespace>
-    <AssemblyName>ProjetoMVC3A</AssemblyName>
+    <RootNamespace>BLL</RootNamespace>
+    <AssemblyName>BLL</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -76,6 +76,5 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
