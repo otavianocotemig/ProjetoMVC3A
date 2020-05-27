@@ -18,5 +18,6 @@ namespace ProjetoMVC3A
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
         }
+        //
     }
 }
