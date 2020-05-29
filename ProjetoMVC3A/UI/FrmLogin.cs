@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace ProjetoMVC3A.UI
 {
-    public partial class Login : Form
+    public partial class FrmLogin : Form
     {
-        public Login()
+        public FrmLogin()
         {
             InitializeComponent();
         }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            this.Close();
+      }
     }
 }
