@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ProjetoMVC3A.DAL
 {
-    class DAL
+    class DALBD
     {
         private MySqlConnection conexao;
         private string string_conexao = "Persist security info= false; " + "server = localhost; " +

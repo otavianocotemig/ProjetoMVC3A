@@ -48,7 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\BLL.cs" />
-    <Compile Include="DAL\DAL.cs" />
+    <Compile Include="DAL\DALBD.cs" />
     <Compile Include="DTO\DTO.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
