@@ -21,5 +21,10 @@ namespace ProjetoMVC3A.UI
         {
             this.Close();
       }
+
+        private void btnEntrar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

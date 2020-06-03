@@ -38,12 +38,14 @@
             // 
             // btnEntrar
             // 
+            this.btnEntrar.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btnEntrar.Location = new System.Drawing.Point(27, 124);
             this.btnEntrar.Name = "btnEntrar";
-            this.btnEntrar.Size = new System.Drawing.Size(115, 49);
+            this.btnEntrar.Size = new System.Drawing.Size(118, 58);
             this.btnEntrar.TabIndex = 0;
             this.btnEntrar.Text = "Entrar";
             this.btnEntrar.UseVisualStyleBackColor = true;
+            this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
             // 
             // label1
             // 
@@ -80,9 +82,10 @@
             // 
             // btnSair
             // 
-            this.btnSair.Location = new System.Drawing.Point(148, 124);
+            this.btnSair.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.btnSair.Location = new System.Drawing.Point(148, 125);
             this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(107, 49);
+            this.btnSair.Size = new System.Drawing.Size(115, 57);
             this.btnSair.TabIndex = 5;
             this.btnSair.Text = "Sair";
             this.btnSair.UseVisualStyleBackColor = true;
@@ -92,7 +95,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(283, 193);
+            this.ClientSize = new System.Drawing.Size(283, 230);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.txtSenha);
             this.Controls.Add(this.label2);
