@@ -9,7 +9,7 @@ namespace ProjetoMVC3A.DTO
     class tblClienteDTO
     {
         private int id_cliente, tp_usuario;
-        private string nome_cliente, sobrenome_cliente, email_cliente, senha_cliente, cpf_cliente;
+        private string nome_cliente, sobrenome_cliente, cpf_cliente, senha_cliente, email_cliente;
 
         public int Id_cliente { get => id_cliente; set => id_cliente = value; }
         public int Tp_usuario { get => tp_usuario; set => tp_usuario = value; }
@@ -34,7 +34,7 @@ namespace ProjetoMVC3A.DTO
             get { return this.email_cliente; }
         }
 
-        public string senha_cliente
+        public string Senha_cliente
         {
             set
             {
