@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,7 +27,7 @@ namespace ProjetoMVC3A.DAL
 
             }
         } 
-        // Metodo para Executar Consulta no Banco
+        // Metodo para Executar Consulta no Banco, sem necessidade de retorno de dados
         public void ExecutarComando(string sql)
         {
             try
@@ -44,5 +45,30 @@ namespace ProjetoMVC3A.DAL
                 conexao.Close();
             }
         }
+        // Metodo para retornar registros do banco de Dados - Retorna em um DataTable
+        public DataTable ExecutarConsulta(string sql)
+        {
+            try
+            {
+                conectar();
+                DataTable dt = new DataTable();
+                MySqlDataAdapter dados = new MySqlDataAdapter(sql, conexao);
+                dados.Fill(dt);
+                return dt;
+            }
+            catch (MySqlException e)
+            {
+                throw new Exception("Não foi possível executar a consulta no Banco de Dados. Erro: " + e.Message);
+            }
+            finally
+            {
+                conexao.Close();
+            }
+        }
+
+
+
+
+
     }
 }

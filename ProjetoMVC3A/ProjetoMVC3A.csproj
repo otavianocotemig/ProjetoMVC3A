@@ -47,7 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BLL\BLL.cs" />
+    <Compile Include="BLL\tblClienteBLL.cs" />
     <Compile Include="DAL\DALBD.cs" />
     <Compile Include="DTO\tblClienteDTO.cs" />
     <Compile Include="Program.cs" />
@@ -90,5 +90,6 @@
   <ItemGroup>
     <Content Include="DAL\tbl_cliente.sql" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
