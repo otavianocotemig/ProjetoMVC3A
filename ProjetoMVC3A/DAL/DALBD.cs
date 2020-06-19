@@ -11,8 +11,10 @@ namespace ProjetoMVC3A.DAL
     class DALBD
     {
         private MySqlConnection conexao;
-        private string string_conexao = "Persist security info= false; " + "server = localhost; " +
-                                         "Database=dbmvc " + " user=root; pwd=;";
+        private string string_conexao =  "Persist security info= false; "+
+                                         "server = localhost; " +
+                                         "Database=dbmvc ;" +
+                                         "user = root; pwd=;";
         // Metodo para conexão com o BD
         public void conectar()
         {
@@ -23,7 +25,7 @@ namespace ProjetoMVC3A.DAL
             }
             catch (MySqlException e)
             {
-                throw new Exception("Problemas na conexão com o banco de dados. Erro: " + e.Message);
+                throw new Exception("Problemas na conexão com o banco de dados. Erro: " + e.Message+" "+string_conexao);
 
             }
         } 
