@@ -34,6 +34,7 @@
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnSair = new System.Windows.Forms.Button();
+            this.lblEsqueciSenha = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // btnEntrar
@@ -91,11 +92,23 @@
             this.btnSair.UseVisualStyleBackColor = true;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
+            // lblEsqueciSenha
+            // 
+            this.lblEsqueciSenha.AutoSize = true;
+            this.lblEsqueciSenha.Location = new System.Drawing.Point(68, 199);
+            this.lblEsqueciSenha.Name = "lblEsqueciSenha";
+            this.lblEsqueciSenha.Size = new System.Drawing.Size(110, 13);
+            this.lblEsqueciSenha.TabIndex = 6;
+            this.lblEsqueciSenha.TabStop = true;
+            this.lblEsqueciSenha.Text = "Esqueci minha Senha";
+            this.lblEsqueciSenha.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblEsqueciSenha_LinkClicked);
+            // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(283, 230);
+            this.Controls.Add(this.lblEsqueciSenha);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.txtSenha);
             this.Controls.Add(this.label2);
@@ -120,5 +133,6 @@
         private System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnSair;
+        private System.Windows.Forms.LinkLabel lblEsqueciSenha;
     }
 }

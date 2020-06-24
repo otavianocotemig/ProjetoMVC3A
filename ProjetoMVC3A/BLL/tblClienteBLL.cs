@@ -26,5 +26,23 @@ namespace ProjetoMVC3A.BLL
                 return false;
             }
         }
+
+        public string RecuperarSenha(string email)
+        {
+           
+            string consulta = string.Format($@"select * from tbl_cliente where email_cliente = '{email}';");
+            DataTable dt = daoBanco.ExecutarConsulta(consulta);
+            if (dt.Rows.Count == 1)
+            {
+                return dt.Rows[0].["senha_cliente"].ToString;
+                
+            }
+            else
+            {
+                return "";
+            }
+        }
+
+
     }
 }

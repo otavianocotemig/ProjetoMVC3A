@@ -54,5 +54,10 @@ namespace ProjetoMVC3A.UI
             }
 
         }
+
+        private void lblEsqueciSenha_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
     }
 }
