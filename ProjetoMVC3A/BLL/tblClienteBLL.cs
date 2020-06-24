@@ -34,8 +34,8 @@ namespace ProjetoMVC3A.BLL
             DataTable dt = daoBanco.ExecutarConsulta(consulta);
             if (dt.Rows.Count == 1)
             {
-                return dt.Rows[0].["senha_cliente"].ToString;
-                
+                return dt.Rows[0]["senha_cliente"].ToString();
+
             }
             else
             {

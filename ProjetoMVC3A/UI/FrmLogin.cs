@@ -57,7 +57,9 @@ namespace ProjetoMVC3A.UI
 
         private void lblEsqueciSenha_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            tblClienteBLL bllCliente = new tblClienteBLL();
+            string senha = bllCliente.RecuperarSenha(txtEmail.Text.Trim());
+            MessageBox.Show(senha, "Falhou!", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
 }
