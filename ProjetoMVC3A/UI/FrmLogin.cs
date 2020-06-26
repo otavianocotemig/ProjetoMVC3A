@@ -41,7 +41,13 @@ namespace ProjetoMVC3A.UI
                 tblClienteBLL bllCliente = new tblClienteBLL();
                 if (bllCliente.Autenticar(cliente.Email_cliente, cliente.Senha_cliente))
                 {
-                    MessageBox.Show("Seja bemvindo ","Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Acesso Liberado. ","Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    // Instanciando o novo formulário do sistema com acesso liberado
+                    this.Hide();
+                    FrmMain Frmprincipal = new FrmMain();
+                    Frmprincipal.ShowDialog();
+                       this.Close();
+                    
                 }
                 else
                 {
