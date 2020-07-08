@@ -31,8 +31,8 @@ namespace ProjetoMVC3A.UI
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
-            try
-            {
+           // try
+            //{
                 // Instanciando o DTO do cliente para armazenar os dados da tela
                 tblClienteDTO cliente = new tblClienteDTO();
                 cliente.Email_cliente = txtEmail.Text.Trim();
@@ -54,10 +54,10 @@ namespace ProjetoMVC3A.UI
                     MessageBox.Show("Cliente não Localizado", "Falhou!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
-            }catch (Exception ex)
-            {
-                MessageBox.Show("Erro: " + ex.Message, "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+        //    }catch (Exception ex)
+       //     {
+       //         MessageBox.Show("Erro: " + ex.Message, "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //    }
 
         }
 
