@@ -43,6 +43,16 @@ namespace ProjetoMVC3A.BLL
             }
         }
 
+        public int VerificarTipoUsuario(string email)
+        {
+            // Selecionar no banco de dados o tipo do usuario
+            // retornar o tipo do usuário.
+
+
+
+
+
+        }
 
     }
 }
