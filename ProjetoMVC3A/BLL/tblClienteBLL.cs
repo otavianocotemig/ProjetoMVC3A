@@ -1,11 +1,6 @@
 ﻿using ProjetoMVC3A.DAL;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Data;
-using System.Runtime.InteropServices.WindowsRuntime;
 
 namespace ProjetoMVC3A.BLL
 {
@@ -29,7 +24,7 @@ namespace ProjetoMVC3A.BLL
 
         public string RecuperarSenha(string email)
         {
-           
+
             string consulta = string.Format($@"select * from tbl_cliente where email_cliente = '{email}';");
             DataTable dt = daoBanco.ExecutarConsulta(consulta);
             if (dt.Rows.Count == 1)
@@ -45,10 +40,17 @@ namespace ProjetoMVC3A.BLL
 
         public int VerificarTipoUsuario(string email)
         {
-            // Selecionar no banco de dados o tipo do usuario
-            // retornar o tipo do usuário.
+            string consulta = string.Format($@"select * from tbl_cliente where email_cliente = '{email}';");
+            DataTable dt = daoBanco.ExecutarConsulta(consulta);
+            if (dt.Rows.Count == 1)
+            {
+                return Convert.ToInt32(dt.Rows[0]["tp_usuario"].ToString());
 
-
+            }
+            else
+            {
+                return 1;
+            }
 
 
 

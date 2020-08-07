@@ -1,38 +1,30 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Drawing.Text;
-using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using ProjetoMVC3A.BLL;
-using ProjetoMVC3A.DAL;
+﻿using ProjetoMVC3A.BLL;
 using ProjetoMVC3A.DTO;
+using System;
+using System.Windows.Forms;
 
 namespace ProjetoMVC3A.UI
 {
     public partial class FrmLogin : Form
     {
-      
+        // Armazena o email do usuario logado
+        public static string email_usuario_logado;
+
         public FrmLogin()
         {
             InitializeComponent();
-            
-    }
+
+        }
 
         private void btnSair_Click(object sender, EventArgs e)
         {
             this.Close();
-      }
+        }
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
             try
-           {
+            {
                 // Instanciando o DTO do cliente para armazenar os dados da tela
                 tblClienteDTO cliente = new tblClienteDTO();
                 cliente.Email_cliente = txtEmail.Text.Trim();
@@ -41,20 +33,26 @@ namespace ProjetoMVC3A.UI
                 tblClienteBLL bllCliente = new tblClienteBLL();
                 if (bllCliente.Autenticar(cliente.Email_cliente, cliente.Senha_cliente))
                 {
-                    MessageBox.Show("Acesso Liberado. ","Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Acesso Liberado. ", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     // Instanciando o novo formulário do sistema com acesso liberado
+                    // Armazenando o valor na varial gloval estática para uso no sistema
+                    email_usuario_logado = cliente.Email_cliente;
                     this.Hide();
-                    FrmMain Frmprincipal = new FrmMain();
-                    Frmprincipal.ShowDialog();
-                       this.Close();
+             
+                     FrmMain Frmprincipal = new FrmMain();
+                     Frmprincipal.ShowDialog();
+                   
                     
+                    this.Close();
+
                 }
                 else
                 {
                     MessageBox.Show("Cliente não Localizado", "Falhou!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
-            }catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show("Erro: " + ex.Message, "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }

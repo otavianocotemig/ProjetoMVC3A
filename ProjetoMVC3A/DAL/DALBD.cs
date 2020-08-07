@@ -1,17 +1,13 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ProjetoMVC3A.DAL
 {
     class DALBD
     {
         private MySqlConnection conexao;
-        private string string_conexao =  "Persist security info= false; "+
+        private string string_conexao = "Persist security info= false; " +
                                          "server = localhost; " +
                                          "Database=dbmvc ;" +
                                          "user = root; pwd=;";
@@ -25,10 +21,10 @@ namespace ProjetoMVC3A.DAL
             }
             catch (MySqlException e)
             {
-                throw new Exception("Problemas na conexão com o banco de dados. Erro: " + e.Message+" "+string_conexao);
+                throw new Exception("Problemas na conexão com o banco de dados. Erro: " + e.Message + " " + string_conexao);
 
             }
-        } 
+        }
         // Metodo para Executar Consulta no Banco, sem necessidade de retorno de dados
         public void ExecutarComando(string sql)
         {
