@@ -38,6 +38,11 @@ namespace ProjetoMVC3A.UI
         {
             Close();
         }
-       
+
+        private void alterarSenhaToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            FrmAlterarSenha FrmAlterarSenha = new FrmAlterarSenha();
+            FrmAlterarSenha.ShowDialog();
+        }
     }
 }

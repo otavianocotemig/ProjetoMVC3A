@@ -51,9 +51,12 @@ namespace ProjetoMVC3A.BLL
             {
                 return 1;
             }
+        }
 
-
-
+        public void AlterarSenhaCliente(string email, string senha)
+        {
+            string sql = string.Format($@"UPDATE tbl_cliente set senha_cliente = '{senha}' where email_cliente = '{email}';");
+            daoBanco.ExecutarComando(sql);
         }
 
     }
