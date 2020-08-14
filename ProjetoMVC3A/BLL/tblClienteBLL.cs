@@ -1,6 +1,8 @@
 ﻿using ProjetoMVC3A.DAL;
+using ProjetoMVC3A.DTO;
 using System;
 using System.Data;
+using System.Drawing;
 
 namespace ProjetoMVC3A.BLL
 {
@@ -59,5 +61,26 @@ namespace ProjetoMVC3A.BLL
             daoBanco.ExecutarComando(sql);
         }
 
+        // Criação de Metodo para selecionar os dados do cliente - Polimorfismo 
+        public DataTable ListarClientes(string email)
+        {
+            string sql = string.Format($@"select * from tbl_cliente where email_cliente = '{email}';");
+            return daoBanco.ExecutarConsulta(sql);
+        }
+        public DataTable ListarClientes()
+        {
+            string sql = string.Format($@"select * from tbl_cliente");
+            return daoBanco.ExecutarConsulta(sql);
+        }
+        // metodo utilizado para alterar dados do cliente
+        public void AlterarCliente(tblClienteDTO DtoCliente)
+        {
+            string sql = string.Format($@"UPDATE tbl_cliente set nome_cliente = '{DtoCliente.Nome_cliente}',
+                                                                 sobrenome_cliente = '{DtoCliente.Sobrenome_cliente}',
+                                                                 cpf_cliente = '{DtoCliente.Cpf_cliente}',
+                                                                 senha_cliente = '{DtoCliente.Senha_cliente}'
+                                                   where email_cliente = '{DtoCliente.Email_cliente}';");
+            daoBanco.ExecutarComando(sql);
+        }
     }
 }

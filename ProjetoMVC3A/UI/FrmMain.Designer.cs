@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.ferramentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.alterarSenhaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.meuPerfilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.administraçãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.setupDoBancoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -54,24 +54,18 @@
             // ferramentasToolStripMenuItem
             // 
             this.ferramentasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.alterarSenhaToolStripMenuItem,
-            this.meuPerfilToolStripMenuItem});
+            this.alterarSenhaToolStripMenuItem});
             this.ferramentasToolStripMenuItem.Name = "ferramentasToolStripMenuItem";
             this.ferramentasToolStripMenuItem.Size = new System.Drawing.Size(84, 20);
             this.ferramentasToolStripMenuItem.Text = "Ferramentas";
             // 
             // alterarSenhaToolStripMenuItem
             // 
+            this.alterarSenhaToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("alterarSenhaToolStripMenuItem.Image")));
             this.alterarSenhaToolStripMenuItem.Name = "alterarSenhaToolStripMenuItem";
             this.alterarSenhaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.alterarSenhaToolStripMenuItem.Text = "Alterar Senha";
+            this.alterarSenhaToolStripMenuItem.Text = "Meu Perfil";
             this.alterarSenhaToolStripMenuItem.Click += new System.EventHandler(this.alterarSenhaToolStripMenuItem_Click_1);
-            // 
-            // meuPerfilToolStripMenuItem
-            // 
-            this.meuPerfilToolStripMenuItem.Name = "meuPerfilToolStripMenuItem";
-            this.meuPerfilToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.meuPerfilToolStripMenuItem.Text = "Meu Perfil";
             // 
             // administraçãoToolStripMenuItem
             // 
@@ -84,7 +78,7 @@
             // setupDoBancoToolStripMenuItem
             // 
             this.setupDoBancoToolStripMenuItem.Name = "setupDoBancoToolStripMenuItem";
-            this.setupDoBancoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.setupDoBancoToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.setupDoBancoToolStripMenuItem.Text = "Setup do Banco";
             // 
             // sairToolStripMenuItem
@@ -125,7 +119,6 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem ferramentasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem alterarSenhaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem meuPerfilToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem administraçãoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem setupDoBancoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
