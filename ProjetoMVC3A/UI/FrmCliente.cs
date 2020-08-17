@@ -43,7 +43,9 @@ namespace ProjetoMVC3A.UI
                 dtoCliente.Sobrenome_cliente = txtSobrenome.Text.ToString();
                 dtoCliente.Senha_cliente = txtSenha.Text.ToString();
                 dtoCliente.Cpf_cliente = txtCpf.Text.ToString();
-                //dtoCliente.Tp_usuario = int.Parse(cmbTipoUsuario.SelectedValue.ToString());
+                dtoCliente.Tp_usuario = int.Parse(cmbTipoUsuario.SelectedValue.ToString());
+
+       
 
                 bllCliente.InserirCliente(dtoCliente);
                 MessageBox.Show("Inserção Realizada com Sucesso. ", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -56,5 +58,11 @@ namespace ProjetoMVC3A.UI
                 MessageBox.Show("Erro: " + ex.Message, "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
+
