@@ -82,5 +82,18 @@ namespace ProjetoMVC3A.BLL
                                                    where email_cliente = '{DtoCliente.Email_cliente}';");
             daoBanco.ExecutarComando(sql);
         }
+
+        //Metodo para Inserir Cliente no Banco de Dados
+        public void InserirCliente(tblClienteDTO ObjCliente)
+        {
+            string sql = string.Format($@"INSERT INTO tbl_cliente VALUES (NULL, '{ObjCliente.Nome_cliente}',
+                                                                                '{ObjCliente.Sobrenome_cliente}',
+                                                                                '{ObjCliente.Email_cliente}',
+                                                                                '{ObjCliente.Senha_cliente}',
+                                                                                '{ObjCliente.Cpf_cliente}',    
+                                                                                '{ObjCliente.Tp_usuario}');");
+            daoBanco.ExecutarComando(sql);
+        }
     }
+   
 }

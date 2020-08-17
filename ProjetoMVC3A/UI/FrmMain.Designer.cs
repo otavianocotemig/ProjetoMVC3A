@@ -36,6 +36,7 @@
             this.setupDoBancoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.email_usuario = new System.Windows.Forms.Label();
+            this.manutençãoDeClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -70,7 +71,8 @@
             // administraçãoToolStripMenuItem
             // 
             this.administraçãoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.setupDoBancoToolStripMenuItem});
+            this.setupDoBancoToolStripMenuItem,
+            this.manutençãoDeClientesToolStripMenuItem});
             this.administraçãoToolStripMenuItem.Name = "administraçãoToolStripMenuItem";
             this.administraçãoToolStripMenuItem.Size = new System.Drawing.Size(99, 20);
             this.administraçãoToolStripMenuItem.Text = "Administração ";
@@ -78,7 +80,7 @@
             // setupDoBancoToolStripMenuItem
             // 
             this.setupDoBancoToolStripMenuItem.Name = "setupDoBancoToolStripMenuItem";
-            this.setupDoBancoToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.setupDoBancoToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
             this.setupDoBancoToolStripMenuItem.Text = "Setup do Banco";
             // 
             // sairToolStripMenuItem
@@ -96,6 +98,13 @@
             this.email_usuario.Name = "email_usuario";
             this.email_usuario.Size = new System.Drawing.Size(0, 13);
             this.email_usuario.TabIndex = 2;
+            // 
+            // manutençãoDeClientesToolStripMenuItem
+            // 
+            this.manutençãoDeClientesToolStripMenuItem.Name = "manutençãoDeClientesToolStripMenuItem";
+            this.manutençãoDeClientesToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
+            this.manutençãoDeClientesToolStripMenuItem.Text = "Manutenção de Clientes";
+            this.manutençãoDeClientesToolStripMenuItem.Click += new System.EventHandler(this.manutençãoDeClientesToolStripMenuItem_Click);
             // 
             // FrmMain
             // 
@@ -123,5 +132,6 @@
         private System.Windows.Forms.ToolStripMenuItem setupDoBancoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
         private System.Windows.Forms.Label email_usuario;
+        private System.Windows.Forms.ToolStripMenuItem manutençãoDeClientesToolStripMenuItem;
     }
 }
