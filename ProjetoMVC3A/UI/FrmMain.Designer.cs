@@ -34,9 +34,10 @@
             this.alterarSenhaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.administraçãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.setupDoBancoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.manutençãoDeClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.email_usuario = new System.Windows.Forms.Label();
-            this.manutençãoDeClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.manutençãoDeFornecedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,7 +65,7 @@
             // 
             this.alterarSenhaToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("alterarSenhaToolStripMenuItem.Image")));
             this.alterarSenhaToolStripMenuItem.Name = "alterarSenhaToolStripMenuItem";
-            this.alterarSenhaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.alterarSenhaToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.alterarSenhaToolStripMenuItem.Text = "Meu Perfil";
             this.alterarSenhaToolStripMenuItem.Click += new System.EventHandler(this.alterarSenhaToolStripMenuItem_Click_1);
             // 
@@ -72,7 +73,8 @@
             // 
             this.administraçãoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.setupDoBancoToolStripMenuItem,
-            this.manutençãoDeClientesToolStripMenuItem});
+            this.manutençãoDeClientesToolStripMenuItem,
+            this.manutençãoDeFornecedoresToolStripMenuItem});
             this.administraçãoToolStripMenuItem.Name = "administraçãoToolStripMenuItem";
             this.administraçãoToolStripMenuItem.Size = new System.Drawing.Size(99, 20);
             this.administraçãoToolStripMenuItem.Text = "Administração ";
@@ -80,8 +82,15 @@
             // setupDoBancoToolStripMenuItem
             // 
             this.setupDoBancoToolStripMenuItem.Name = "setupDoBancoToolStripMenuItem";
-            this.setupDoBancoToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
+            this.setupDoBancoToolStripMenuItem.Size = new System.Drawing.Size(231, 22);
             this.setupDoBancoToolStripMenuItem.Text = "Setup do Banco";
+            // 
+            // manutençãoDeClientesToolStripMenuItem
+            // 
+            this.manutençãoDeClientesToolStripMenuItem.Name = "manutençãoDeClientesToolStripMenuItem";
+            this.manutençãoDeClientesToolStripMenuItem.Size = new System.Drawing.Size(231, 22);
+            this.manutençãoDeClientesToolStripMenuItem.Text = "Manutenção de Clientes";
+            this.manutençãoDeClientesToolStripMenuItem.Click += new System.EventHandler(this.manutençãoDeClientesToolStripMenuItem_Click);
             // 
             // sairToolStripMenuItem
             // 
@@ -99,12 +108,12 @@
             this.email_usuario.Size = new System.Drawing.Size(0, 13);
             this.email_usuario.TabIndex = 2;
             // 
-            // manutençãoDeClientesToolStripMenuItem
+            // manutençãoDeFornecedoresToolStripMenuItem
             // 
-            this.manutençãoDeClientesToolStripMenuItem.Name = "manutençãoDeClientesToolStripMenuItem";
-            this.manutençãoDeClientesToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
-            this.manutençãoDeClientesToolStripMenuItem.Text = "Manutenção de Clientes";
-            this.manutençãoDeClientesToolStripMenuItem.Click += new System.EventHandler(this.manutençãoDeClientesToolStripMenuItem_Click);
+            this.manutençãoDeFornecedoresToolStripMenuItem.Name = "manutençãoDeFornecedoresToolStripMenuItem";
+            this.manutençãoDeFornecedoresToolStripMenuItem.Size = new System.Drawing.Size(231, 22);
+            this.manutençãoDeFornecedoresToolStripMenuItem.Text = "Manutenção de Fornecedores";
+            this.manutençãoDeFornecedoresToolStripMenuItem.Click += new System.EventHandler(this.manutençãoDeFornecedoresToolStripMenuItem_Click);
             // 
             // FrmMain
             // 
@@ -133,5 +142,6 @@
         private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
         private System.Windows.Forms.Label email_usuario;
         private System.Windows.Forms.ToolStripMenuItem manutençãoDeClientesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem manutençãoDeFornecedoresToolStripMenuItem;
     }
 }

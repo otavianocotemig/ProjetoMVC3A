@@ -1,4 +1,4 @@
-﻿using ProjetoMVC3A.DAL;
+﻿    using ProjetoMVC3A.DAL;
 using ProjetoMVC3A.DTO;
 using System;
 using System.Data;
@@ -6,7 +6,7 @@ using System.Drawing;
 
 namespace ProjetoMVC3A.BLL
 {
-    class tblClienteBLL
+    class   tblClienteBLL
     {
         private DALBD daoBanco = new DALBD();
 

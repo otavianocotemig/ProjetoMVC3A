@@ -50,5 +50,11 @@ namespace ProjetoMVC3A.UI
             FrmCliente FrmCliente = new FrmCliente();
             FrmCliente.ShowDialog();
         }
+
+        private void manutençãoDeFornecedoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmFornecedor FrmFornecedor = new FrmFornecedor();
+            FrmFornecedor.ShowDialog();
+        }
     }
 }
