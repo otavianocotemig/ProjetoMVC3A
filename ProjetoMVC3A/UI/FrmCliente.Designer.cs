@@ -48,16 +48,20 @@
             this.btnNovo = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtPesquisarClientes = new System.Windows.Forms.TextBox();
+            this.btnPesquisarClientes = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.GridClientes)).BeginInit();
             this.SuspendLayout();
             // 
             // GridClientes
             // 
             this.GridClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GridClientes.Location = new System.Drawing.Point(48, 247);
+            this.GridClientes.Location = new System.Drawing.Point(35, 263);
             this.GridClientes.Name = "GridClientes";
             this.GridClientes.Size = new System.Drawing.Size(660, 198);
             this.GridClientes.TabIndex = 0;
+            this.GridClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridClientes_CellClick);
             // 
             // btnsair
             // 
@@ -189,7 +193,7 @@
             this.btnNovo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNovo.Image = ((System.Drawing.Image)(resources.GetObject("btnNovo.Image")));
             this.btnNovo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNovo.Location = new System.Drawing.Point(604, 197);
+            this.btnNovo.Location = new System.Drawing.Point(494, 169);
             this.btnNovo.Name = "btnNovo";
             this.btnNovo.Size = new System.Drawing.Size(104, 44);
             this.btnNovo.TabIndex = 42;
@@ -206,7 +210,7 @@
             this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnEditar.Image")));
             this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEditar.Location = new System.Drawing.Point(494, 197);
+            this.btnEditar.Location = new System.Drawing.Point(494, 114);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(104, 44);
             this.btnEditar.TabIndex = 43;
@@ -223,7 +227,7 @@
             this.btnExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExcluir.Image = ((System.Drawing.Image)(resources.GetObject("btnExcluir.Image")));
             this.btnExcluir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExcluir.Location = new System.Drawing.Point(384, 197);
+            this.btnExcluir.Location = new System.Drawing.Point(494, 54);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(104, 44);
             this.btnExcluir.TabIndex = 44;
@@ -231,12 +235,42 @@
             this.btnExcluir.Text = "EXCLUIR";
             this.btnExcluir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(90, 240);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(93, 13);
+            this.label3.TabIndex = 45;
+            this.label3.Text = "Pesquisar Clientes";
+            // 
+            // txtPesquisarClientes
+            // 
+            this.txtPesquisarClientes.Location = new System.Drawing.Point(198, 237);
+            this.txtPesquisarClientes.Name = "txtPesquisarClientes";
+            this.txtPesquisarClientes.Size = new System.Drawing.Size(312, 20);
+            this.txtPesquisarClientes.TabIndex = 46;
+            // 
+            // btnPesquisarClientes
+            // 
+            this.btnPesquisarClientes.Location = new System.Drawing.Point(517, 234);
+            this.btnPesquisarClientes.Name = "btnPesquisarClientes";
+            this.btnPesquisarClientes.Size = new System.Drawing.Size(142, 23);
+            this.btnPesquisarClientes.TabIndex = 47;
+            this.btnPesquisarClientes.Text = "Pesquisar";
+            this.btnPesquisarClientes.UseVisualStyleBackColor = true;
+            this.btnPesquisarClientes.Click += new System.EventHandler(this.btnPesquisarClientes_Click);
             // 
             // FrmCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(740, 502);
+            this.Controls.Add(this.btnPesquisarClientes);
+            this.Controls.Add(this.txtPesquisarClientes);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnNovo);
@@ -288,5 +322,8 @@
         private System.Windows.Forms.Button btnNovo;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnExcluir;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtPesquisarClientes;
+        private System.Windows.Forms.Button btnPesquisarClientes;
     }
 }

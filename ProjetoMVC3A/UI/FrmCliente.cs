@@ -38,12 +38,13 @@ namespace ProjetoMVC3A.UI
         {
             try
             {
+                // Passo os dados para o DTO
                 dtoCliente.Email_cliente = txtEmail.Text.ToString();
                 dtoCliente.Nome_cliente = txtNome.Text.ToString();
                 dtoCliente.Sobrenome_cliente = txtSobrenome.Text.ToString();
                 dtoCliente.Senha_cliente = txtSenha.Text.ToString();
                 dtoCliente.Cpf_cliente = txtCpf.Text.ToString();
-                dtoCliente.Tp_usuario = int.Parse(cmbTipoUsuario.SelectedValue.ToString());
+             //   dtoCliente.Tp_usuario = int.Parse(cmbTipoUsuario.SelectedValue.ToString());
 
        
 
@@ -61,6 +62,53 @@ namespace ProjetoMVC3A.UI
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
+            // Passo os dados para o DTO
+            dtoCliente.Email_cliente = txtEmail.Text.ToString();
+            dtoCliente.Nome_cliente = txtNome.Text.ToString();
+            dtoCliente.Sobrenome_cliente = txtSobrenome.Text.ToString();
+            dtoCliente.Senha_cliente = txtSenha.Text.ToString();
+            dtoCliente.Cpf_cliente = txtCpf.Text.ToString();
+            bllCliente.AlterarCliente(dtoCliente);
+            GridClientes.DataSource = bllCliente.ListarClientes();
+        }
+
+        private void GridClientes_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtCodigo.Text = GridClientes.Rows[e.RowIndex].Cells[0].Value.ToString();
+            txtNome.Text = GridClientes.Rows[e.RowIndex].Cells[1].Value.ToString();
+            txtSobrenome.Text = GridClientes.Rows[e.RowIndex].Cells[2].Value.ToString();
+            txtEmail.Text = GridClientes.Rows[e.RowIndex].Cells[3].Value.ToString();
+            txtSenha.Text = GridClientes.Rows[e.RowIndex].Cells[4].Value.ToString();
+            txtCpf.Text = GridClientes.Rows[e.RowIndex].Cells[5].Value.ToString();
+
+            btnEditar.Enabled = true;
+            btnExcluir.Enabled = true;
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (MessageBox.Show("Está ação irá deletar o registro selecionado e não poderá ser desfeito, deseja continuar?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+                {
+                    dtoCliente.Id_cliente = Convert.ToInt32(txtCodigo.Text);
+                    bllCliente.ExcluirCliente(dtoCliente);
+                    GridClientes.DataSource = bllCliente.ListarClientes();
+                }
+                  
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnPesquisarClientes_Click(object sender, EventArgs e)
+        {
+            string condicao = "nome_cliente like '%" + txtPesquisarClientes.Text + "%'" +
+                              "or sobrenome_cliente like '%" + txtPesquisarClientes.Text + "%'" +
+                              "or email_cliente like '%"+ txtPesquisarClientes.Text+"%'";
+            GridClientes.DataSource = bllCliente.PesquisarClientes(condicao);
 
         }
     }

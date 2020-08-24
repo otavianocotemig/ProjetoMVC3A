@@ -94,6 +94,20 @@ namespace ProjetoMVC3A.BLL
                                                                                 '{ObjCliente.Tp_usuario}');");
             daoBanco.ExecutarComando(sql);
         }
+        // Metodo utilizado para excluir Cliente no Banco
+        public void ExcluirCliente(tblClienteDTO objCliente)
+        {
+            string sql = string.Format($@"DELETE FROM tbl_cliente where id_cliente = {objCliente.Id_cliente};");
+            daoBanco.ExecutarComando(sql);
+        }
+       
+        // Metodo para Consultar Clientes no Banco
+        public DataTable PesquisarClientes(string condicao)
+        {
+            string sql = string.Format($@"select * from tbl_cliente where " + condicao);
+            return daoBanco.ExecutarConsulta(sql);
+        }
+
     }
    
 }
