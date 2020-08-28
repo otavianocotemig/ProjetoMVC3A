@@ -18,6 +18,7 @@ namespace ProjetoMVC3A.UI
         // Instanciando a BLL e DTO
         tblClienteBLL bllCliente = new tblClienteBLL();
         tblClienteDTO dtoCliente = new tblClienteDTO();
+        tblTipousuarioBLL bllTipousuario = new tblTipousuarioBLL();
 
         public FrmCliente()
         {
@@ -32,6 +33,8 @@ namespace ProjetoMVC3A.UI
         private void FrmCliente_Load(object sender, EventArgs e)
         {
             GridClientes.DataSource = bllCliente.ListarClientes();
+            this.PreencheTipoUsuario();
+          
         }
 
         private void btnNovo_Click(object sender, EventArgs e)
@@ -44,7 +47,7 @@ namespace ProjetoMVC3A.UI
                 dtoCliente.Sobrenome_cliente = txtSobrenome.Text.ToString();
                 dtoCliente.Senha_cliente = txtSenha.Text.ToString();
                 dtoCliente.Cpf_cliente = txtCpf.Text.ToString();
-             //   dtoCliente.Tp_usuario = int.Parse(cmbTipoUsuario.SelectedValue.ToString());
+                dtoCliente.Tp_usuario = int.Parse(cmbTipoUsuario.SelectedValue.ToString());
 
        
 
@@ -68,6 +71,8 @@ namespace ProjetoMVC3A.UI
             dtoCliente.Sobrenome_cliente = txtSobrenome.Text.ToString();
             dtoCliente.Senha_cliente = txtSenha.Text.ToString();
             dtoCliente.Cpf_cliente = txtCpf.Text.ToString();
+            dtoCliente.Tp_usuario = int.Parse(cmbTipoUsuario.SelectedValue.ToString());
+
             bllCliente.AlterarCliente(dtoCliente);
             GridClientes.DataSource = bllCliente.ListarClientes();
         }
@@ -80,6 +85,8 @@ namespace ProjetoMVC3A.UI
             txtEmail.Text = GridClientes.Rows[e.RowIndex].Cells[3].Value.ToString();
             txtSenha.Text = GridClientes.Rows[e.RowIndex].Cells[4].Value.ToString();
             txtCpf.Text = GridClientes.Rows[e.RowIndex].Cells[5].Value.ToString();
+            cmbTipoUsuario.SelectedItem = GridClientes.Rows[e.RowIndex].Cells[6].Value.ToString();
+            cmbTipoUsuario.Refresh();
 
             btnEditar.Enabled = true;
             btnExcluir.Enabled = true;
@@ -110,6 +117,15 @@ namespace ProjetoMVC3A.UI
                               "or email_cliente like '%"+ txtPesquisarClientes.Text+"%'";
             GridClientes.DataSource = bllCliente.PesquisarClientes(condicao);
 
+        }
+
+        // Metodo para Preencher tipo do usuario
+        public void PreencheTipoUsuario()
+        {
+            cmbTipoUsuario.DataSource = bllTipousuario.ListarTipoUsuario();
+            cmbTipoUsuario.DisplayMember = "descricao";
+            cmbTipoUsuario.ValueMember = "id";
+            
         }
     }
 }

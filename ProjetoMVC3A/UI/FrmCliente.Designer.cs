@@ -181,11 +181,13 @@
             // 
             // cmbTipoUsuario
             // 
+            this.cmbTipoUsuario.DisplayMember = "descricao";
             this.cmbTipoUsuario.FormattingEnabled = true;
             this.cmbTipoUsuario.Location = new System.Drawing.Point(198, 197);
             this.cmbTipoUsuario.Name = "cmbTipoUsuario";
-            this.cmbTipoUsuario.Size = new System.Drawing.Size(121, 21);
+            this.cmbTipoUsuario.Size = new System.Drawing.Size(163, 21);
             this.cmbTipoUsuario.TabIndex = 29;
+            this.cmbTipoUsuario.ValueMember = "id";
             // 
             // btnNovo
             // 

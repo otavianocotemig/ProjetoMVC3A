@@ -23,7 +23,7 @@ namespace ProjetoMVC3A.UI
             // Verificando o Tipo do Usuário 1 = Normal 0 = Administrador
             tblClienteBLL bllCliente = new tblClienteBLL();
             email_usuario.Text = FrmLogin.email_usuario_logado;
-            if ((bllCliente.VerificarTipoUsuario(FrmLogin.email_usuario_logado)) == 1){
+            if ((bllCliente.VerificarTipoUsuario(FrmLogin.email_usuario_logado)) != 1){
                 this.administraçãoToolStripMenuItem.Visible = false;
 
             }

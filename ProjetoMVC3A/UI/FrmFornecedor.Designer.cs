@@ -38,9 +38,9 @@
             // GridFornecedores
             // 
             this.GridFornecedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GridFornecedores.Location = new System.Drawing.Point(12, 59);
+            this.GridFornecedores.Location = new System.Drawing.Point(12, 158);
             this.GridFornecedores.Name = "GridFornecedores";
-            this.GridFornecedores.Size = new System.Drawing.Size(776, 359);
+            this.GridFornecedores.Size = new System.Drawing.Size(776, 260);
             this.GridFornecedores.TabIndex = 1;
             // 
             // button1
