@@ -39,6 +39,9 @@ namespace ProjetoMVC3A.UI
 
         private void btnNovo_Click(object sender, EventArgs e)
         {
+
+           
+
             try
             {
                 // Passo os dados para o DTO
@@ -61,6 +64,10 @@ namespace ProjetoMVC3A.UI
             {
                 MessageBox.Show("Erro: " + ex.Message, "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            // utilizada para limpar todos os campos do formulario
+            new LimpaForm(this);
+            btnEditar.Enabled = false;
+            btnExcluir.Enabled = false;
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
@@ -127,6 +134,7 @@ namespace ProjetoMVC3A.UI
             cmbTipoUsuario.ValueMember = "id";
             
         }
+              
     }
 }
 
