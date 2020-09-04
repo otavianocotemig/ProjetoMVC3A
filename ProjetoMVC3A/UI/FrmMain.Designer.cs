@@ -35,9 +35,10 @@
             this.administraçãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.setupDoBancoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manutençãoDeClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.manutençãoDeFornecedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.email_usuario = new System.Windows.Forms.Label();
-            this.manutençãoDeFornecedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.manutençãoDeProdutosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -74,7 +75,8 @@
             this.administraçãoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.setupDoBancoToolStripMenuItem,
             this.manutençãoDeClientesToolStripMenuItem,
-            this.manutençãoDeFornecedoresToolStripMenuItem});
+            this.manutençãoDeFornecedoresToolStripMenuItem,
+            this.manutençãoDeProdutosToolStripMenuItem});
             this.administraçãoToolStripMenuItem.Name = "administraçãoToolStripMenuItem";
             this.administraçãoToolStripMenuItem.Size = new System.Drawing.Size(99, 20);
             this.administraçãoToolStripMenuItem.Text = "Administração ";
@@ -92,6 +94,13 @@
             this.manutençãoDeClientesToolStripMenuItem.Text = "Manutenção de Clientes";
             this.manutençãoDeClientesToolStripMenuItem.Click += new System.EventHandler(this.manutençãoDeClientesToolStripMenuItem_Click);
             // 
+            // manutençãoDeFornecedoresToolStripMenuItem
+            // 
+            this.manutençãoDeFornecedoresToolStripMenuItem.Name = "manutençãoDeFornecedoresToolStripMenuItem";
+            this.manutençãoDeFornecedoresToolStripMenuItem.Size = new System.Drawing.Size(231, 22);
+            this.manutençãoDeFornecedoresToolStripMenuItem.Text = "Manutenção de Fornecedores";
+            this.manutençãoDeFornecedoresToolStripMenuItem.Click += new System.EventHandler(this.manutençãoDeFornecedoresToolStripMenuItem_Click);
+            // 
             // sairToolStripMenuItem
             // 
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
@@ -108,12 +117,12 @@
             this.email_usuario.Size = new System.Drawing.Size(0, 13);
             this.email_usuario.TabIndex = 2;
             // 
-            // manutençãoDeFornecedoresToolStripMenuItem
+            // manutençãoDeProdutosToolStripMenuItem
             // 
-            this.manutençãoDeFornecedoresToolStripMenuItem.Name = "manutençãoDeFornecedoresToolStripMenuItem";
-            this.manutençãoDeFornecedoresToolStripMenuItem.Size = new System.Drawing.Size(231, 22);
-            this.manutençãoDeFornecedoresToolStripMenuItem.Text = "Manutenção de Fornecedores";
-            this.manutençãoDeFornecedoresToolStripMenuItem.Click += new System.EventHandler(this.manutençãoDeFornecedoresToolStripMenuItem_Click);
+            this.manutençãoDeProdutosToolStripMenuItem.Name = "manutençãoDeProdutosToolStripMenuItem";
+            this.manutençãoDeProdutosToolStripMenuItem.Size = new System.Drawing.Size(231, 22);
+            this.manutençãoDeProdutosToolStripMenuItem.Text = "Manutenção de Produtos";
+            this.manutençãoDeProdutosToolStripMenuItem.Click += new System.EventHandler(this.manutençãoDeProdutosToolStripMenuItem_Click);
             // 
             // FrmMain
             // 
@@ -143,5 +152,6 @@
         private System.Windows.Forms.Label email_usuario;
         private System.Windows.Forms.ToolStripMenuItem manutençãoDeClientesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem manutençãoDeFornecedoresToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem manutençãoDeProdutosToolStripMenuItem;
     }
 }
