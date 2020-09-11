@@ -33,12 +33,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btnsair = new System.Windows.Forms.Button();
             this.GridProdutos = new System.Windows.Forms.DataGridView();
+            this.comboCategoria = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.GridProdutos)).BeginInit();
             this.SuspendLayout();
             // 
             // btnPesquisarProdutos
             // 
-            this.btnPesquisarProdutos.Location = new System.Drawing.Point(546, 97);
+            this.btnPesquisarProdutos.Location = new System.Drawing.Point(512, 164);
             this.btnPesquisarProdutos.Name = "btnPesquisarProdutos";
             this.btnPesquisarProdutos.Size = new System.Drawing.Size(114, 23);
             this.btnPesquisarProdutos.TabIndex = 52;
@@ -48,7 +50,7 @@
             // 
             // txtPesquisarProdutos
             // 
-            this.txtPesquisarProdutos.Location = new System.Drawing.Point(227, 100);
+            this.txtPesquisarProdutos.Location = new System.Drawing.Point(193, 167);
             this.txtPesquisarProdutos.Name = "txtPesquisarProdutos";
             this.txtPesquisarProdutos.Size = new System.Drawing.Size(312, 20);
             this.txtPesquisarProdutos.TabIndex = 51;
@@ -56,7 +58,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(119, 103);
+            this.label3.Location = new System.Drawing.Point(85, 170);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(98, 13);
             this.label3.TabIndex = 50;
@@ -64,7 +66,7 @@
             // 
             // btnsair
             // 
-            this.btnsair.Location = new System.Drawing.Point(666, 98);
+            this.btnsair.Location = new System.Drawing.Point(632, 165);
             this.btnsair.Name = "btnsair";
             this.btnsair.Size = new System.Drawing.Size(88, 23);
             this.btnsair.TabIndex = 49;
@@ -77,17 +79,36 @@
             this.GridProdutos.AllowUserToAddRows = false;
             this.GridProdutos.AllowUserToDeleteRows = false;
             this.GridProdutos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GridProdutos.Location = new System.Drawing.Point(22, 126);
+            this.GridProdutos.Location = new System.Drawing.Point(22, 206);
             this.GridProdutos.Name = "GridProdutos";
             this.GridProdutos.ReadOnly = true;
             this.GridProdutos.Size = new System.Drawing.Size(732, 198);
             this.GridProdutos.TabIndex = 48;
+            // 
+            // comboCategoria
+            // 
+            this.comboCategoria.FormattingEnabled = true;
+            this.comboCategoria.Location = new System.Drawing.Point(182, 109);
+            this.comboCategoria.Name = "comboCategoria";
+            this.comboCategoria.Size = new System.Drawing.Size(219, 21);
+            this.comboCategoria.TabIndex = 53;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(124, 112);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(52, 13);
+            this.label1.TabIndex = 54;
+            this.label1.Text = "Categoria";
             // 
             // FrmProdutos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.comboCategoria);
             this.Controls.Add(this.btnPesquisarProdutos);
             this.Controls.Add(this.txtPesquisarProdutos);
             this.Controls.Add(this.label3);
@@ -109,5 +130,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnsair;
         private System.Windows.Forms.DataGridView GridProdutos;
+        private System.Windows.Forms.ComboBox comboCategoria;
+        private System.Windows.Forms.Label label1;
     }
 }

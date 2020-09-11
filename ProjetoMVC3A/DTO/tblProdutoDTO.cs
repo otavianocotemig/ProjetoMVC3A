@@ -12,10 +12,9 @@ namespace ProjetoMVC3A.DTO
         private int id, quantidade, tbl_categoria_id, tbl_fornecedor_id;
         private String nomeProduto, descricao;
         private double preco, peso;
-
+     
         // Metodos Get e Set Padrão
         public int Id { get => id; set => id = value; }
-        public int Tbl_categoria_id { get => tbl_categoria_id; set => tbl_categoria_id = value; }
         public int Tbl_fornecedor_id { get => tbl_fornecedor_id; set => tbl_fornecedor_id = value; }
         public double Preco { get => preco; set => preco = value; }
         public double Peso { get => peso; set => peso = value; }
@@ -71,10 +70,24 @@ namespace ProjetoMVC3A.DTO
             get { return this.quantidade; }
         }
 
-     
+        public int Tbl_categoria_id
+        {
+            set
+            {
+                if (value != 0)
+                {
+                    this.tbl_categoria_id = value;
+                }
+                else
+                {
+                    throw new Exception("O campo Categoria do Produto é obrigatório.");
+                }
 
+            }
+            get { return this.tbl_categoria_id; }
 
+        }
 
-
+       
     }
 }

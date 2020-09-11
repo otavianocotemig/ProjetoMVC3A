@@ -17,6 +17,8 @@ namespace ProjetoMVC3A.UI
         // Instanciar a BLL e DTO da classe
         tblProdutoBLL bllProduto = new tblProdutoBLL();
         tblProdutoDTO dtoProduto = new tblProdutoDTO();
+        tblCategoriaBLL bllCategoria = new tblCategoriaBLL();
+
 
         public FrmProdutos()
         {
@@ -26,6 +28,7 @@ namespace ProjetoMVC3A.UI
         private void FrmProdutos_Load(object sender, EventArgs e)
         {
                GridProdutos.DataSource = bllProduto.PesquisarProdutos();
+               this.PreencheCategoria();
         }
 
         private void btnPesquisarProdutos_Click(object sender, EventArgs e)
@@ -37,6 +40,14 @@ namespace ProjetoMVC3A.UI
         private void btnsair_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        // Metodo para Preencher a categoria do produto
+        public void PreencheCategoria()
+        {
+            comboCategoria.DataSource = bllCategoria.ListarCategoria();
+            comboCategoria.DisplayMember = "descricao";
+            comboCategoria.ValueMember = "id";
         }
     }
 }
