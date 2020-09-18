@@ -15,18 +15,8 @@ namespace ProjetoMVC3A.BLL
 
         public DataTable ListarFornecedores()
         {
-            string sql = string.Format($@"select * from tbl_fornecedor");
+            string sql = string.Format($@"select * from tbl_fornecedor order by nome");
             return daoBanco.ExecutarConsulta(sql);
         }
-
-
-
-
-
-        /*public DataTable ListarFornecedores(string email)
-        {
-            string sql = string.Format($@"select * from tbl_fornecedor where email_fornecedor = '{email}';");
-            return daoBanco.ExecutarConsulta(sql);
-        }*/
     }
 }
