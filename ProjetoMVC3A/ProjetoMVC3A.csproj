@@ -53,6 +53,7 @@
     <Compile Include="BLL\tblProdutoBLL.cs" />
     <Compile Include="BLL\tblTipousuarioBLL.cs" />
     <Compile Include="DAL\DALBD.cs" />
+    <Compile Include="DTO\tblCategoriaDTO.cs" />
     <Compile Include="DTO\tblClienteDTO.cs" />
     <Compile Include="DTO\tblFornecedorDTO.cs" />
     <Compile Include="DTO\tblProdutoDTO.cs" />
@@ -69,6 +70,12 @@
     </Compile>
     <Compile Include="UI\FrmAlterarSenha.Designer.cs">
       <DependentUpon>FrmAlterarSenha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FrmCadCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FrmCadCategoria.Designer.cs">
+      <DependentUpon>FrmCadCategoria.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\FrmCliente.cs">
       <SubType>Form</SubType>
@@ -107,6 +114,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\FrmAlterarSenha.resx">
       <DependentUpon>FrmAlterarSenha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FrmCadCategoria.resx">
+      <DependentUpon>FrmCadCategoria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\FrmCliente.resx">
       <DependentUpon>FrmCliente.cs</DependentUpon>

@@ -53,6 +53,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.comboFornecedor = new System.Windows.Forms.ComboBox();
+            this.lblNovaCategoria = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.GridProdutos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -164,7 +165,7 @@
             this.btnNovo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNovo.Location = new System.Drawing.Point(554, 152);
             this.btnNovo.Name = "btnNovo";
-            this.btnNovo.Size = new System.Drawing.Size(104, 44);
+            this.btnNovo.Size = new System.Drawing.Size(104, 43);
             this.btnNovo.TabIndex = 61;
             this.btnNovo.TabStop = false;
             this.btnNovo.Text = "NOVO";
@@ -286,11 +287,23 @@
             this.comboFornecedor.Size = new System.Drawing.Size(164, 21);
             this.comboFornecedor.TabIndex = 70;
             // 
+            // lblNovaCategoria
+            // 
+            this.lblNovaCategoria.AutoSize = true;
+            this.lblNovaCategoria.Location = new System.Drawing.Point(427, 198);
+            this.lblNovaCategoria.Name = "lblNovaCategoria";
+            this.lblNovaCategoria.Size = new System.Drawing.Size(76, 13);
+            this.lblNovaCategoria.TabIndex = 72;
+            this.lblNovaCategoria.TabStop = true;
+            this.lblNovaCategoria.Text = "Criar Categoria";
+            this.lblNovaCategoria.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblNovaCategoria_LinkClicked);
+            // 
             // FrmProdutos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(692, 450);
+            this.Controls.Add(this.lblNovaCategoria);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.comboFornecedor);
             this.Controls.Add(this.txtPeso);
@@ -350,5 +363,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ComboBox comboFornecedor;
+        private System.Windows.Forms.LinkLabel lblNovaCategoria;
     }
 }

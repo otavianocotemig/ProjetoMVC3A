@@ -160,5 +160,12 @@ namespace ProjetoMVC3A.UI
             }
 
         }
+
+        private void lblNovaCategoria_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            FrmCadCategoria FrmCadCategoria = new FrmCadCategoria();
+            FrmCadCategoria.ShowDialog();
+            this.PreencheCategoria();
+        }
     }
 }
